@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fff; /* White background */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 140vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        /* Style for the common button styles */
+        .button-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .button {
+            flex: 1;
+            padding: 10px 50px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            color: #fff; /* Text color for the buttons */
+            background-color: #3498db; /* Button background color */
+            border: 1px solid #3498db; /* Add border to the buttons */
+        }
+
+        .button:hover {
+            background-color: #45a049; /* Change color on hover */
+            border-color: #45a049; /* Change border color on hover */
+        }
+
+        /* Style for the link */
+        a {
+            margin-top: 30px; /* Add space between buttons and link */
+            text-decoration: none;
+            color: #3498db; /* Link color */
+        }
+
+        a:hover {
+            text-decoration: underline; /* Underline link on hover */
+        }
+    </style>
+</head>
+<body>
+    <h1>Get Started</h1>
+
+    <!-- Button container for Login and Register buttons -->
+    <div class="button-container">
+        <a href="{{url_for('login')}}" class="button">Login</a>
+        <a href="{{url_for('register')}}" class="button">Register</a>
+    </div>
+
+    <!-- "Don't have an account? Sign up" link -->
+    <a href="{{url_for('register')}}">Terms of use</a>
+    <a href="{{url_for('register')}}">privacy</a>
+</body>
+</html>
+
+
+

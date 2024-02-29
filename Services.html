@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Services</title>
+
+    <!-- Ribbon Styles -->
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .ribbon {
+            background-color: #3498db; /* Ribbon background color */
+            padding: 30px 0;
+            position: fixed;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 70%;
+            text-align: center;
+            z-index: 1000; /* Ensure the ribbon is above other content */
+        }
+
+        .ribbon a {
+            color: #fff; /* Button text color */
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .ribbon a:hover {
+            background-color: #2980b9; /* Button background color on hover */
+        }
+    </style>
+
+    <!-- Login Authentication System Styles -->
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 120vh;
+            flex-direction: column;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .image-container {
+            display: flex;
+            justify-content: space-around;
+            width: 70%;
+        }
+
+        .image-container a {
+            margin: 50px;
+        }
+
+        img {
+            width: 300px;
+            height: 250px;
+            margin: 15px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+            margin-top: 50px;
+        }
+
+        .button:hover {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            color: #333;
+            background-color: #OOOOFF;
+            padding: 10px 20px;
+            margin: 0 10px;
+            display: inline-block;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        a:hover {
+            background-color: #C3C4E8;
+        }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Ribbon Navigation -->
+<div class="ribbon">
+    <a href="http://127.0.0.1:5000/dashboard">Home</a>
+    <a href="http://127.0.0.1:5000/services">Services</a>
+    <a href="http://127.0.0.1:5000/about">About</a>
+    <a href="#">Contact</a>
+    <!-- Add more buttons as needed -->
+</div>
+<p1>Our Services Include</p1>
+
+<div class="image-container">
+    <!-- Additional pictures -->
+    <a href="{{url_for('FamilyPlanning')}}">
+        <img src="static/photos/WhatsApp Image 2024-01-16 at 13.33.30.png" alt="Family Planning">
+    </a>
+
+    <a href="{{url_for('medicine')}}">
+        <img src="static/photos/WhatsApp Image 2024-01-16 at 13.33.31.png" alt="Medicine">
+    </a>
+
+    <!-- Clickable image as a button -->
+    <a href="{{url_for('about')}}">
+        <img src="static/photos/WhatsApp Image 2024-01-16 at 13.33.32.png" alt="Login">
+    </a>
+</div>
+
+<br>
+<a href="{{url_for('logout')}}" class="button">Click here to logout</a>
+</body>
+</html>
