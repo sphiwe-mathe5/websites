@@ -10,14 +10,14 @@ from flask_mail import Mail, Message
 app = Flask(__name__)
 bcrypt = Bcrypt(app)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///database.db'
-app.config['SECRET_KEY'] = 'hdkhfdhhdfhgfdh dghdhjggdfh'
+app.config['SECRET_KEY'] = ''
 db = SQLAlchemy(app)
 
-app.config['MAIL_SERVER'] = 'smtp.gmail.com'
-app.config['MAIL_PORT'] = 465
+app.config['MAIL_SERVER'] = ''
+app.config['MAIL_PORT'] = ''
 app.config['MAIL_USE_SSL'] = True
 app.config['MAIL_USERNAME'] = 'mathesphiwe689@gmail.com'
-app.config['MAIL_PASSWORD'] = 'rylt stkd ufig hcgm'
+app.config['MAIL_PASSWORD'] = ''
 
 mail = Mail(app)
 
