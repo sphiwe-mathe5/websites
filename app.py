@@ -104,8 +104,8 @@ def book_appointment():
         content = request.form['content']
 
         msg = Message('New Appointment',
-                      sender='mathesphiwe689@gmail.com',  # Your email address
-                      recipients=['nazireemathe@gmail.com'])  # Recipient email address
+                      sender='mathesphiwe689@gmail.com',  
+                      recipients=['nazireemathe@gmail.com'])  
         msg.body = f'New appointment details:\nName: {name}\nSurname: {surname}\nEmail: {email}\nPhone: {phone}\nTime Slot: {time_slot}\nContent: {content}'
         mail.send(msg)
 
